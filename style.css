@@ -1,0 +1,61 @@
+:root{
+    --shadeorange: #eabe59;
+    --shadeblack: #27071e;
+    --defaultfont: 'Satoshi';
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--shadeblack);
+}
+
+h1{
+    position: fixed ;
+    color: var(--shadeorange);
+    font-family: var(--defaultfont);
+    margin-left: 20vh;
+    margin-top: 3vh;
+    letter-spacing: -1.2px;
+}
+
+div.wrapper{
+    position: absolute;
+    margin-top: 35vh;
+    margin-left: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--shadeorange);
+    height: 40vh;
+    padding: 3vh;
+    border-radius: 2vh;
+}
+
+form{
+    font-family: var(--defaultfont);
+    font-weight: 700;
+
+}
+
+form input{
+    width: 100%;
+    height: 4vh;
+    background: transparent;
+    padding: 1vh;
+    border: 2px solid var(--shadeblack);
+}
+
+.btn{
+    font-family: var(--defaultfont);
+    padding: 1vh;
+    background: transparent;
+    border: solid var(--shadeblack);
+}
+
+.btn:hover{
+    background-color: var(--shadeblack);
+    color: var(--shadeorange);
+    cursor: pointer;
+}
