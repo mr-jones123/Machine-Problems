@@ -40,6 +40,7 @@ form{
 }
 
 form input{
+    
     width: 100%;
     height: 4vh;
     background: transparent;
@@ -48,10 +49,11 @@ form input{
 }
 
 .btn{
+    font-weight: 700;
     font-family: var(--defaultfont);
     padding: 1vh;
     background: transparent;
-    border: solid var(--shadeblack);
+    border: 2px solid var(--shadeblack);
 }
 
 .btn:hover{
