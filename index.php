@@ -1,25 +1,21 @@
 <?php 
-    session_start();
-    function addVideos($deviceName, $price, $quantity){
-        // Check if 'videos' session variable is not set or not an array
-        if (!isset($_SESSION['videos']) || !is_array($_SESSION['videos'])) {
-            $_SESSION['videos'] = array();
-        }
+    function addDevice($deviceName, $devicePrice, $deviceQuantity){
+        $localhost = "localhost";
+        $username = "root";
+        $password = "Themaclife123@";
+        $database = "useraccounts";
 
-        // Add the new video to the 'videos' session variable
-        $_SESSION['videos'][] = array(
-            'deviceName' => $deviceName,
-            'price' => $price,
-            'quantity' => $quantity
-        );
+        $connection = new mysqli($localhost, $username, $password, $database);
+        
+        $insertQuery = "INSERT INTO items (DeviceName, Price, Quantity) VALUES ('$deviceName', '$devicePrice', '$deviceQuantity')";
+        $connection->query($insertQuery);
     }
+    session_start();
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $deviceName = $_POST['deviceName'];
-        $devicePrice = $_POST['devicePrice'];
-        $deviceQuantity = $_POST['deviceQuantity'];
-        addVideos($deviceName, $devicePrice, $deviceQuantity);
-        header('Location: view.php');   
+        addDevice($_POST['deviceName'],$_POST['devicePrice'],$_POST['deviceQuantity']);
+        header('Location: view.php');
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
