@@ -40,12 +40,14 @@ if (isset($_GET['action']) && $_GET['action'] == 'clearPurchases'){
             <th>Device Name</th>
             <th>Price</th>
             <th>Quantity</th>
+            <th>Action</th>
         </tr>
         <?php foreach($_SESSION['Devices'] as $devices): ?>
             <tr>
                 <td><?php echo $devices['Device_Name'];?></td>
                 <td>$<?php echo number_format($devices['Price'],2);?></td>
                 <td><?php echo $devices['Quantity'];?></td>
+                <td><button></button></td>
             </tr>
         <?php endforeach;?>
     </table>
