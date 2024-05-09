@@ -2,7 +2,7 @@
 require 'connect.php';
 $connection = dbConnect();
 
-$query = "SELECT purchase_history.Quantity as PurchasedQuantity, items.DeviceName, purchase_history.TotalCost, purchase_history.PurchaseDate FROM purchase_history JOIN items ON purchase_history.DeviceID = items.ID";
+$query = "SELECT purchase_history.Quantity as PurchasedQuantity, purchase_history.DeviceName, purchase_history.TotalCost, purchase_history.PurchaseDate FROM purchase_history";
 $result = $connection->query($query);
 
 echo '<h1>Purchased Items</h1>';
