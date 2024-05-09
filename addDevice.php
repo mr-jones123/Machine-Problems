@@ -1,11 +1,11 @@
 <?php
 session_start();
 if($_SERVER['REQUEST_METHOD']=='POST'){
-    $deviceName = $_POST['Device Name'];
+    $deviceName = $_POST['Device_Name'];
     $price = $_POST['Price'];
     $quantity = $_POST['Quantity'];
     $_SESSION['Devices'][]=[
-        'Device Name' => $deviceName,
+        'Device_Name' => $deviceName,
         'Price' => $price,
         'Quantity' => $quantity,
     ];
