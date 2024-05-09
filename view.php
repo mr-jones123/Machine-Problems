@@ -1,36 +1,3 @@
-<?php
-function viewDevices()
-{
-    $localhost = "localhost";
-    $username = "root";
-    $password = "Themaclife123@";
-    $database = "useraccounts";
-
-    $connection = new mysqli($localhost, $username, $password, $database);
-    $sql = "SELECT * FROM items";
-    $result = $connection->query($sql);
-
-    // Check if there are any results
-    if ($result->num_rows > 0) {
-        // Start an HTML table
-        echo "<table>";
-        echo "<tr><th>Device Name</th><th>Price</th><th>Quantity</th></tr>";
-
-        // Loop through each row and display the data
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>" . $row["DeviceName"] . "</td>";
-            echo "<td>" . $row["Price"] . "</td>";
-            echo "<td>" . $row["Quantity"] . "</td>";
-            echo "</tr>";
-        }
-
-        echo "</table>";
-    } else {
-        echo "0 results";
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,12 +10,43 @@ function viewDevices()
 </head>
 
 <body>
-    <h1>Video Rental</h1>
-    <div id="viewWrapper">
-        <form method="POST" action="view.php">
-            <?php viewDevices()   ?>
-        </form>
-
+      <h1>Video Rental</h1>
+    <div class = "viewTable" >
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Device Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Update</th>
+                    <th>Purchase</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    require 'connect.php';
+                    $connection = dbConnect();
+                    $viewQuery = "SELECT * FROM items";
+                    $result = $connection->query($viewQuery);
+                    while ($row = $result->fetch_assoc()) {
+                ?>
+            <tr>
+                <td><?php echo $row['ID']?></td>
+                <td><?php echo $row['DeviceName']?></td>
+                <td><?php echo "$" .$row['Price']?></td>
+                <td><?php echo $row['Quantity']?></td>
+                <td><a href="update.php"><button id = "btn-table">Update</button></a></td>
+                <td><a href="buy.php"><button id = "btn-table">Buy</button></a></td>
+                <td><a href="delete.php"><button id = "btn-table">Delete</button></a></td>
+            </tr>
+            <?php 
+                }
+            ?>
+            </tbody>
+        </table>
+        <button id ="btn-goback"><a href = "index.php">Go Back</a></button>
     </div>
 
 </body>

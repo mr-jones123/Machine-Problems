@@ -8,9 +8,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 body{
     background-color: var(--shadeblack);
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
 }
 
 h1{
@@ -20,6 +28,14 @@ h1{
     margin-left: 20vh;
     margin-top: 3vh;
     letter-spacing: -1.2px;
+}
+h2 {
+    position: fixed;
+    color: var(--shadeorange);
+    font-family: var(--defaultfont);
+    font-weight: 500;
+    margin-top: 20vh;
+    margin-left: 48vw;
 }
 table,th,td {
     border: 2px solid var(--shadeblack);
@@ -37,16 +53,49 @@ div.wrapper{
     padding: 3vh;
     border-radius: 2vh;
 }
-
-div#viewWrapper {
+img#walkman{
+    display: flex;
     position: absolute;
+    margin-top: 30vh;
+    margin-left: 10vw;
+    height: 40vh;
+    width: 25vw;
+}
+div.viewTable {
+    height: auto;   
+    position: absolute;
+    font-family: var(--defaultfont);
+    background-color: var(--shadeorange);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--shadeorange);
-    display: flex;
-    height: auto;
     padding: 3vh;
+    
+}
+button#btn-table{
+    background: transparent;
+    font-family: var(--defaultfont);
+    font-weight: 700;
+    padding: 1vh;
+    border: 2px solid var(--shadeblack);
+}
+button#btn-table:hover{
+    background-color: var(--shadeblack);
+    color: var(--shadeorange);
+    cursor: pointer;
+}
+button#btn-goback{
+    background: transparent;
+    font-family: var(--defaultfont);
+    font-weight: 700;
+    padding: 1vh;
+    border: 2px solid var(--shadeblack);
+    margin-top: 10px;
+}
+button#btn-goback:hover{
+    background-color: var(--shadeblack);
+    color: var(--shadeorange);
+    cursor: pointer;
 }
 
 form{
@@ -76,3 +125,4 @@ form input{
     color: var(--shadeorange);
     cursor: pointer;
 }
+
