@@ -10,16 +10,22 @@
 <body>
     <h1>Video Rental</h1>
     <div class="wrapper">
-        <form method="POST" action="">
+        <form method="POST" action="addDevice.php">
             <label for="Name">Device Name:</label>
             <input class ="input" name="Device Name" required> <br><br>
             <label for="Price">Price:</label>
             <input class ="input" name="Price" required> <br><br>
-            <label for="Price">Quantity:</label>
+            <label for="Quantity">Quantity:</label>
             <input class ="input" name="Quantity" required> <br><br>
             <button type="submit" class="btn">Add Device</button>
         </form>
 
+    </div>
+    <div class="wrapper2">
+        <ul>
+            <li><a href="view.php">View All Devices</a></li>
+            <li><a href="purchases.php">View Purchase History</a></li>
+        </ul>
     </div>
 
 </body>
