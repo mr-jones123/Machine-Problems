@@ -10,7 +10,7 @@
 </head>
 
 <body>
-      <h1>Video Rental</h1>
+      <h1>View Devices</h1>
     <div class = "viewTable" >
         <table>
             <thead>
@@ -19,9 +19,10 @@
                     <th>Device Name</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Update</th>
-                    <th>Purchase</th>
+                    <th>View Details</th>
+                    <th>Edit</th>
                     <th>Delete</th>
+                    <th>Buy</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,11 +36,12 @@
             <tr>
                 <td><?php echo $row['ID']?></td>
                 <td><?php echo $row['DeviceName']?></td>
-                <td><?php echo "$" .$row['Price']?></td>
+                <td><?php echo "$" .number_format($row['Price'],2)?></td>
                 <td><?php echo $row['Quantity']?></td>
-                <td><a href="update.php"><button id = "btn-table">Update</button></a></td>
-                <td><a href="buy.php"><button id = "btn-table">Buy</button></a></td>
-                <td><a href="delete.php"><button id = "btn-table">Delete</button></a></td>
+                <td><a href="details.php?id=<?php echo $row['ID']; ?>"><button id = "btn-table">View Details</button></a></td>
+                <td><a href="edit.php?id=<?php echo $row['ID']; ?>"><button id = "btn-table">Edit</button></a></td>
+                <td><a href="delete.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this device?');"><button id = "btn-table">Delete</button></a></td>
+                <td><a href="buy.php?id=<?php echo $row['ID']; ?>"><button id = "btn-table">Buy</button></a></td>
             </tr>
             <?php 
                 }
@@ -47,6 +49,8 @@
             </tbody>
         </table>
         <button id ="btn-goback"><a href = "index.php">Go Back</a></button>
+        <button id ="btn-goback"><a href = "clear_devices.php">Clear All Devices</a></button>
+        <button id ="btn-goback"><a href = "index.php">Clear All Purchases</a></button>
     </div>
 
 </body>

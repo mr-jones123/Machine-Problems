@@ -10,9 +10,9 @@
       "port": 3306,
       "driver": "MySQL",
       "name": "phpCONNECT",
-      "database": "useraccounts",
+      "database": "devices",
       "username": "root",
-      "password": "Themaclife123@"
+      "password": "password"
     }
   ]
 }
