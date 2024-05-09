@@ -15,7 +15,7 @@ $price = $row['Price'];
 if ($currentQuantity >= $quantityToBuy) {
     $totalCost = $price * $quantityToBuy;
 
-    $insertQuery = "INSERT INTO purchase_history (DeviceID, DeviceName, Quantity, TotalCost, PurchaseDate) VALUES ($id, '$deviceName', $quantityToBuy, $totalCost, NOW())";
+    $insertQuery = "INSERT INTO purchase_history (DeviceName, Quantity, TotalCost, PurchaseDate) VALUES ('$deviceName', $quantityToBuy, $totalCost, NOW())";
     $connection->query($insertQuery);
 
     $newQuantity = $currentQuantity - $quantityToBuy;
