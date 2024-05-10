@@ -2,11 +2,8 @@
 function dbConnect(){
      $localhost = "localhost";
      $username = "root";
-     $password = "password";
-     $database = "devices";
-
-     // Set the default MySQLi socket (for Mac)
-     ini_set('mysqli.default_socket', '/tmp/mysql.sock');
+     $password = "Themaclife123@";
+     $database = "useraccounts";
 
      $connection = new mysqli($localhost, $username, $password, $database);
 

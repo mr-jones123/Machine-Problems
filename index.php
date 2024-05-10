@@ -46,8 +46,8 @@
             <button type="submit" class="btn">Add Device</button>
             <!-- links for viewing devices and purchase history -->
             <ul>
-                <li><a href="view.php">View All Devices</a></li>
-                <li><a href="purchases.php">View Purchase History</a></li>
+                <li><button type="submit" id="btn-viewDevice"><a href="view.php">View All Devices</a></button></li>
+                <li><button type="submit" id="btn-viewPurchases"><a href="purchases.php">View Purchase History</a></button></li>
             </ul>
         </form> 
 

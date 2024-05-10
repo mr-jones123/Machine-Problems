@@ -3,7 +3,7 @@ require 'connect.php';
 $connection = dbConnect();
 
 // Query to delete all records from the purchase_history table
-$clearPurchaseHistoryQuery = "TRUNCATE TABLE purchase_history";
+$clearPurchaseHistoryQuery = "DELETE FROM purchase_history";
 if ($connection->query($clearPurchaseHistoryQuery) === TRUE) {
     echo "Purchase history cleared successfully";
 } else {

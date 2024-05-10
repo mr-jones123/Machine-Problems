@@ -50,7 +50,7 @@
         </table>
         <button id ="btn-goback"><a href = "index.php">Go Back</a></button>
         <button id ="btn-goback"><a href = "clear_devices.php">Clear All Devices</a></button>
-        <button id ="btn-goback"><a href = "index.php">Clear All Purchases</a></button>
+        <button id ="btn-goback"><a href = "clear_purchase_history.php">Clear All Purchases</a></button>
     </div>
 
 </body>

@@ -20,7 +20,10 @@ img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
 }
-
+p{
+    color: var(--shadeblack);
+    font-family: var(--defaultfont);
+}
 h1{
     position: fixed ;
     color: var(--shadeorange);
@@ -34,13 +37,17 @@ h2 {
     color: var(--shadeorange);
     font-family: var(--defaultfont);
     font-weight: 500;
-    margin-top: 20vh;
-    margin-left: 48vw;
+    margin-top: 26vh;
+    margin-left: 50vw;
+}
+ul,li{
+    list-style: none;
 }
 table,th,td {
     border: 2px solid var(--shadeblack);
     border-collapse: collapse;
     padding: 1vh;
+    font-family: var(--defaultfont);
 }
 div.wrapper{
     position: absolute;
@@ -49,7 +56,7 @@ div.wrapper{
     display: flex;
     justify-content: center;
     background-color: var(--shadeorange);
-    height: 40vh;
+    height: auto;
     padding: 3vh;
     border-radius: 2vh;
 }
@@ -71,6 +78,49 @@ div.viewTable {
     left: 50%;
     padding: 3vh;
     
+}
+div#view{
+    height: auto;   
+    position: absolute;
+    font-family: var(--defaultfont);
+    background-color: var(--shadeorange);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3vh;
+}
+#update {
+   
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid var(--shadeblack);
+    color: var(--shadeblack);
+    text-align: center;
+    cursor: pointer;
+}
+
+
+button#btn-viewDevice{
+    font-weight: 700;
+    font-family: var(--defaultfont);
+    padding: 1vh;
+    background: transparent;
+    border: 2px solid var(--shadeblack);
+    float: right;
+    margin-top: 2vh;
+}
+button#btn-viewPurchases{
+    font-weight: 700;
+    font-family: var(--defaultfont);
+    padding: 1vh;
+    background: transparent;
+    border: 2px solid var(--shadeblack);
+    margin-top: 2vh;
+}
+button#btn-viewDevice:hover,button#btn-viewPurchases:hover {
+    background-color: var(--shadeblack);
+    color: var(--shadeorange);
+    cursor: pointer;
 }
 button#btn-table{
     background: transparent;
