@@ -1,19 +1,6 @@
-<!-- <?php
-// require 'connect.php';
-
-// $query = "SELECT SUM(TotalCost) as TotalCost, SUM(Quantity) as TotalQuantity FROM purchase_history";
-// $result = $connection->query($query);
-// $row = $result->fetch_assoc();
-
-// echo '<h2>Total Summary</h2>';
-// echo 'Total cost of purchases: $' . number_format($row['TotalCost'], 2) . '<br>';
-// echo 'Total quantity of items sold: ' . $row['TotalQuantity'] . '<br>';
-
-// echo '<a href="index.php">Back to index</a>';
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,14 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href=".\images\walkman1.png">
 </head>
-<body> 
-    <h1>Electronic Device Store</h1>   
+
+<body>
+    <h1>Electronic Device Store</h1>
     <nav>
     </nav>
     <img id="walkman" src="./images/walkman.png">
     <h2>Purchased Items</h2>
-<div class="wrapper">
-    <?php
+    <div class="wrapper">
+        <?php
     require 'connect.php';
     $connection = dbConnect();
 
@@ -42,7 +30,11 @@
     }
     echo '</table>';
     ?>
-</div>
+    </div>
+
+    <button class="back-btn"><a href="index.php">Go Back</a></button>
+
 
 </body>
+
 </html>

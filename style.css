@@ -99,7 +99,6 @@ div#view{
     cursor: pointer;
 }
 
-
 button#btn-viewDevice{
     font-weight: 700;
     font-family: var(--defaultfont);
@@ -173,5 +172,24 @@ form input{
 .btn:hover{
     background-color: var(--shadeblack);
     color: var(--shadeorange);
+    cursor: pointer;
+}
+
+.back-btn{
+    position: absolute;
+    color: var(--shadeorange);
+    display: flex;
+    left: 70%;
+    top: 80%;
+    font-weight: 700;
+    font-family: var(--defaultfont);
+    padding: 2vh;
+    background: transparent;
+    border: 2px solid var(--shadeorange);
+}
+
+.back-btn:hover{
+    background-color: var(--shadeorange);
+    color: var(--shadeblack);
     cursor: pointer;
 }

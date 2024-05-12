@@ -22,6 +22,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +30,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href=".\images\walkman1.png">
 </head>
-<body> 
-    <h1>Electronic Device Store</h1>   
+
+<body>
+    <h1>Electronic Device Store</h1>
     <nav>
     </nav>
     <img id="walkman" src="./images/walkman1.png">
@@ -38,20 +40,21 @@
     <div class="wrapper">
         <form method="POST" action="index.php">
             <label for="Name">Device Name:</label>
-            <input class ="input" name="deviceName" required> <br><br>
+            <input class="input" name="deviceName" required> <br><br>
             <label for="Price">Price:</label>
-            <input class ="input" name="devicePrice" required> <br><br>
+            <input class="input" name="devicePrice" required> <br><br>
             <label for="Price">Quantity:</label>
-            <input class ="input" name="deviceQuantity" required> <br><br>
+            <input class="input" name="deviceQuantity" required> <br><br>
             <button type="submit" class="btn">Add Device</button>
-            <!-- links for viewing devices and purchase history -->
             <ul>
                 <li><button type="submit" id="btn-viewDevice"><a href="view.php">View All Devices</a></button></li>
-                <li><button type="submit" id="btn-viewPurchases"><a href="purchases.php">View Purchase History</a></button></li>
+                <li><button type="submit" id="btn-viewPurchases"><a href="purchases.php">View Purchase
+                            History</a></button></li>
             </ul>
-        </form> 
+        </form>
 
     </div>
 
 </body>
+
 </html>

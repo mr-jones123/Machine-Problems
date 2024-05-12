@@ -34,7 +34,7 @@ $device = $result->fetch_assoc();
             <input type="submit" value="Buy">
         </form>
     </div>
-
+    <button class="back-btn"><a href="view.php">Go Back</a></button>
 </body>
 
 </html>

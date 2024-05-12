@@ -26,23 +26,23 @@ $device = $result->fetch_assoc();
     </nav>
     <img id="walkman" src="./images/walkman4.png">
     <h2>Details</h2>
-  <div class="wrapper">
-    <table>
-        <tr>
-            <th>Device Name</th>
-            <td><?php echo $device['DeviceName']; ?></td>
-        </tr>
-        <tr>
-            <th>Price</th>
-            <td><?php echo "$" . number_format($device['Price'], 2); ?></td>
-        </tr>
-        <tr>
-            <th>Quantity</th>
-            <td><?php echo $device['Quantity']; ?></td>
-        </tr>
-    </table>
-</div>
-
+    <div class="wrapper">
+        <table>
+            <tr>
+                <th>Device Name</th>
+                <td><?php echo $device['DeviceName']; ?></td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td><?php echo "$" . number_format($device['Price'], 2); ?></td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td><?php echo $device['Quantity']; ?></td>
+            </tr>
+        </table>
+    </div>
+    <button class="back-btn"><a href="view.php">Go Back</a></button>
 </body>
 
-</html> 
+</html>
